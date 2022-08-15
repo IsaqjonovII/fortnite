@@ -48,6 +48,10 @@
   font-weight: 900;
 }
 
+.battle_bannerText h2 {
+  margin: 30px 0px;
+}
+
 .battle_darth {
   width: 100%;
   min-height: 50vh;
@@ -63,6 +67,8 @@
   line-height: 64px;
   font-size: 50px;
 }
+
+
 
 .battle_darth h3 {
   font-size: 30px;
