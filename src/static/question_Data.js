@@ -9,7 +9,7 @@ export const QuestionData = [
             "Auchan",
             "Cora",
             "Leclerc",
-            "Systeme U",
+            "Systeme U"
         ]
     },
     {
@@ -22,7 +22,7 @@ export const QuestionData = [
             "Saturn",
             "Edeka",
             "Netto",
-            "Müller",
+            "Müller"
         ]
     },
     {
