@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+
+.bucks {
+  background-color: #fff;
+}
+
+.bucks_container {
+  width: 100%;
+  height: 100%;
+  min-height: 90vh;
+  background-image: url("https://cdn2.unrealengine.com/Fortnite%2Fposa-card-redemption%2FBG_1907x939_1567968566929_1907x878_1569312335335-1907x877-d35d9e0920677225dd2b1065a0193fa848712bfa.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.bucks_img {
+  width: 647px;
+  height: 522px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bucks_img img {
+  width: calc(642px - 129px - 129px);
+  height: 100%;
+  object-fit: cover;
+}
+
+.container_redeem {
+  width: 688px;
+  height: 522px;
+  display: flex;
+  padding: 10px 15px;
+  flex-direction: column;
+}
+
+.container_redeem h1 {
+  font-size: 64px;
+  font-weight: 400;
+  width: 80%;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #fff;
+  font-family: "Titan One", cursive;
+  margin: 0px 0px 10px 0px;
+}
+
+.container_redeem h3 {
+  font-size: 30px;
+  font-family: "Titan One", cursive;
+  color: #ffff00;
+  margin: 10px 0px 10px 0px;
+  font-weight: 300;
+}
+
+.container_redeem p {
+  font-size: 1rem;
+  margin: 10px 0px 10px 0px;
+  color: #333333;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container_redeem button {
+  width: 240px;
+  height: 60px;
+  color: #333333;
+  font-size: 1.25rem;
+  background-color: #ffff00;
+  font-family: "Titan One", cursive;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.container_redeem button:active {
+  transform: scale(0.9);
+  transition: 100ms;
+}
+
+.text_container {
+  width: 90%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 10px 53px;
+}
+
+.text_container p {
+  line-height: 25.5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  font-family: "Open Sans", sans-serif;
+  color: #333333;
+  letter-spacing: 0.9px;
+}
+
+.text_container p a {
+  color: #0cadea;
+  font-weight: 700;
+}
+
+.question_container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.question_container img {
+  width: 30%;
+  object-fit: cover;
+}
+
+.FAQS_container {
+  width: 908px;
+  height: 100%;
+  min-height: 180vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0px 50px;
+}
+
+.container_title {
+  width: 763px;
+}
+
+.container_title h2 {
+  width: 100%;
+  font-size: 4rem;
+  font-family: "Titan One", cursive;
+  font-weight: 500;
+  color: #002a44;
+}
+
+.container_title p {
+  font-size: 19.2px;
+  font-weight: 300;
+  width: 100%;
+  color: #f61212;
+  font-family: "Titan One", cursive;
+  line-height: 21px;
+}
+.container_questions {
+  width: 100%;
+  min-height: 100vh;
+  margin: 25px 0px;
+}
+
+.container_questions > div {
+  border-top: 1px solid #ccc;
+}
+
+
+
+.question {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  transition: 250ms;
+  padding: 10px 0px;
+}
+
+.icons {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.icons > h3 {
+  width: 699px;
+  font-family: "Titan One", cursive;
+  min-height: 52px;
+  font-weight: 200;  
+  height: auto;
+  color: #0cadea;
+}
+
+.icons > h3:last-child {
+  height: 120px;
+}
+
+
+.icons svg {
+  color: #002a44;
+  font-size: 18px;
+}
+
+
+.question p {
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  color: #333333;
+  line-height: 22px;
+  font-weight: 700;
+  height: auto;
+  max-height: 60vh;
+}
+
+.collection_container {
+  width: 100%;
+  min-height: 45vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.collection_country {
+  width: 45%;
+  height: auto;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+}
+
+.collection_country li h3 {
+  font-family: "Open Sans", sans-serif;
+  color: #333333;
+}
+
+.collection_country > ul > li {
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  flex-direction: column;
+  color: #0cadea;
+  list-style: none;
+  transition: 150ms ease-in;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.collection_country > ul > li:hover{
+  text-decoration: underline;
+  transition: 150ms ease-in;
+}

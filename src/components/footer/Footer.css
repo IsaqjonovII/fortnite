@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+.footer{
+    width: 100%;
+    height: 549px;
+    background-color: #2a2a2a;
+}
+
+.footermain{
+    width: 85%;
+    height: 100%;
+    background-color: #2a2a2a;
+    margin: auto;
+}
+.social_network{
+    display: flex;
+    height: 40px;
+    align-items: center;
+    padding-top: 60px;
+}
+.network_collection{
+    display: flex;
+    list-style-type: none;
+    flex: 1;
+}
+
+.network_item{
+    font-size: 30px;
+    color: rgb(204, 204, 204);
+    margin-left: 20px;
+    transition: .5s;
+}
+
+.backtop_btn{
+    width: 130px;
+    height: 54px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.05px;
+    line-height: 16px;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(204, 204, 204);
+    margin-right: 20px;
+}
+
+.network_item:hover  , .backtop_btn:hover , .pages_item:hover , .text p:hover{
+    color: yellow;
+    cursor: pointer;
+}
+
+.pages_collection{
+    width: 400px;
+    height: 164px;
+    margin-top: 60px;
+    margin-left: 30px;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    list-style-type: none;
+}
+
+.pages_item{
+    color: rgb(204, 204, 204);
+    font-family: OpenSans,sans-serif;
+    font-weight: 400;
+    font-size: .9em;
+    line-height: 1.75;
+}
+
+.footer_description{
+    margin-top: 100px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: rgb(204, 204, 204);
+    margin-left: 10px;
+}
+
+.text{
+    width: 220px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 8px;
+}
+
+.text p{
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: rgb(204, 204, 204);
+    font-family: OpenSans,sans-serif;
+    font-weight: 400;
+    font-size: .9em;
+    line-height: 1.75;
+}

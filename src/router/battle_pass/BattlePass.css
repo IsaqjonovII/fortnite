@@ -1,0 +1,99 @@
+.battle {
+  width: 100%;
+  min-height: 210vh;
+}
+
+.battle_banner {
+  width: 100%;
+  height: 870px;
+  background-color: #333;
+  position: relative;
+  overflow: hidden;
+}
+
+.battle_banner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+  position: absolute;
+}
+
+.battle_bannerText {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10%;
+  color: #fff;
+}
+
+.battle_banner::before {
+  content: "";
+  position: absolute;
+  bottom: -220px;
+  left: -100px;
+  width: 120%;
+  height: 300px;
+  background-color: #f8df3d;
+  transform: rotate(5deg);
+  z-index: 6;
+}
+
+.battle_bannerText h1 {
+  font-size: 90px;
+  font-weight: 900;
+}
+
+.battle_darth {
+  width: 100%;
+  min-height: 50vh;
+  background-color: #f8df3d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.battle_darth h1 {
+  font-weight: 900;
+  font-family: var(--font-cursive);
+  line-height: 64px;
+  font-size: 50px;
+}
+
+.battle_darth h3 {
+  font-size: 30px;
+  font-family: var(--font-cursive);
+  color: #414141;
+}
+
+.battle_mainImage img {
+  width: 100%;
+  padding: 10px;
+  object-fit: cover;
+}
+
+.battle_images_con {
+  width: 70%;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.battle_images_con img {
+  width: 100px;
+  border-radius: 50%;
+  filter: brightness(0.6);
+  transition: 250ms ease-in;
+  object-fit: cover;
+}
+
+.battle_images_con img:hover {
+  filter: brightness(1);
+  cursor: pointer;
+  transition: 250ms ease-in;
+}

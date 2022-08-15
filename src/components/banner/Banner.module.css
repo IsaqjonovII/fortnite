@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+.banner {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.img_container {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  margin: auto;
+}
+
+.img_container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.dots_container {
+  width: 50vw;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn {
+  width: 200px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.335);
+  border: none;
+  margin: 0px 5px;
+}
+
+.center_container {
+  width: 95%;
+  height: 676px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: -50px auto 20px auto;
+}
+
+.left {
+  flex: 1;
+  height: 676px;
+  position: relative;
+  margin: 0px 10px;
+  color: #f7f7f7;
+  overflow: hidden;
+}
+
+.left img,
+.right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale3d(1, 1, 1);
+  transition: 250ms;
+}
+
+.left > p,
+.right > p {
+  position: absolute;
+  margin: 0px 120px;
+  bottom: 150px;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Titan One", cursive;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+.right {
+  width: 40%;
+  color: #f7f7f7;
+  height: 676px;
+  position: relative;
+  overflow: hidden;
+}
+
+.right img:hover,
+.left img:hover {
+  transition: 250ms;
+  transform: scale3d(1.05, 1.05, 1.05);
+}
+.right:hover .center_container p,
+h2 .left:hover .center_container p,
+h2 {
+  position: relative;
+  bottom: 10px;
+}
+
+.left h2,
+.right h2 {
+  position: absolute;
+  bottom: 40px;
+  margin: 0px 50px;
+  font-family: "Titan One", cursive;
+  font-weight: 500;
+  font-size: 35px;
+  text-transform: uppercase;
+  line-height: 35px;
+  z-index: 3;
+}
+
+.flex {
+  width: 90%;
+  height: 512px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 0px 0px 20px;
+}
+
+.flex_boxes {
+  width: 26%;
+  background-color: #ffffff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+  overflow: hidden;
+  transition: 250ms;
+  position: relative;
+}
+
+.flex_boxes p {
+ position: absolute;
+ bottom: 100px;
+  font-family: "Titan One", cursive;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #1db8f3;
+}
+
+.flex_boxes h2 {
+  font-size: 25px;
+  color: #000000;
+  font-weight: 900;
+  font-family: "Titan One", cursive;
+  padding: 5px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 10px;
+}
+
+.flex_boxes img {
+  width: 100%;
+  height: 70%;
+  transform: scale3d(1, 1, 1);
+  object-fit: cover;
+}
+
+.flex_boxes img:hover {
+  transition: 250ms;
+  transform: scale3d(1.05, 1.05, 1.05);
+}
+
+
+.bottom_container {
+  width: 100%;
+  height: 130vh;
+  position: relative;
+  background-color: #ff0;
+}
+
+.banner_img {
+  width: 100%;
+}
+
+.png {
+  width: 30vw;
+  height: 20vh;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20vw;
+  background-color: transparent;
+  height: 15vh;
+  fill: currentColor;
+}
+
+.bottom_container h2 {
+  font-size: 1.75rem;
+  color: #000000;
+  font-family: "Titan One", cursive;
+  font-style: italic;
+  text-transform: uppercase;
+  margin: 10px 0px;
+}
+
+.bottom_container h2:nth-child(3n) {
+  position: absolute;
+  top: 61%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom_container h2:nth-child(5n) {
+  position: absolute;
+  top: 81%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.valid_btn {
+  background: rgb(0, 0, 0);
+  clip-path: polygon(0% 16%, 100% 6%, 98% 100%, 2% 90%);
+  margin: 0px;
+  padding: 0.5875em 1em 0.525em;
+  font-family: "Titan One", cursive;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}

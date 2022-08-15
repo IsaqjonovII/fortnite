@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+
+.help {
+  height: 1593px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: "Titan One", cursive;
+  background-color: #04aae8;
+  padding: 100px 0px;
+}
+
+.help_title {
+  width: 662px;
+  height: 90%;
+  background-color: #04aae8;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.title_ques {
+  width: 100%;
+  height: 35vh;
+  padding: 20px 10px;
+  border-top: 2px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: #f7f7ff;
+  animation: moveLeft 500ms linear 1;
+  cursor: default;
+}
+
+.title_ques h1 {
+  width: 100%;
+  height: auto;
+  padding: 0px 10px;
+  display: flex;
+  font-weight: 500;
+  font-family: "Titan One", cursive;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title_ques > h1 > svg {
+  font-size: 44px;
+}
+
+.title_ques > h1:hover svg {
+  animation: grow 700ms linear infinite alternate;
+}
+
+.title_ques p {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Titan One", cursive;
+  text-align: left;
+  line-height: 30px;
+}
+
+.title_ques > p > a {
+  color: #ffff00;
+  font-family: "Titan One", cursive;
+  text-decoration: underline;
+}
+
+.help h2 {
+  color: #f7f7ff;
+  z-index: 1;
+}
+
+.help_img {
+  width: 30%;
+  height: 100%;
+  padding: 100px 0;
+  transform: translateX(0px);
+  transition: 700ms ease-in;
+  background-color: #04aae8;
+}
+
+.help_img:hover {
+  transform: translateX(-20px);
+  transition: 700ms ease-in;
+}
+
+.help_img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1) translateX(0px);
+  }
+  to {
+    transform: scale(1.4) translateX(5px);
+  }
+}
+
+@keyframes moveLeft {
+    from {
+      transform: translateX(-30px);
+    }
+    to {
+      transform: translateX(0px);
+    }
+  }
