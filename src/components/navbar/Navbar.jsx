@@ -1,49 +1,59 @@
-import React, { useState, useEffect } from 'react';
-import './Navbar.css';
-import { IoSearchOutline, IoGlobeOutline, IoPersonAdd } from 'react-icons/io5';
+import React, { useState, useEffect } from "react";
+import "./Navbar.css";
+import { HiMenu } from "react-icons/hi"
+import { IoSearchOutline, IoGlobeOutline, IoPersonAdd, } from "react-icons/io5";
 import { FiX } from "react-icons/fi";
 import { Link, NavLink } from "react-router-dom";
-import axios from 'axios';
+import axios from "axios";
 
-const Navbar = () => {
+const Navbar = ({ isSidebarOpen, toggleSidebar }) => {
     const [search, setSearch] = useState(false);
     const [inputValue, setInputValue] = useState("");
     const [data, setData] = useState([]);
     const [searchData, setSearchData] = useState([]);
 
-
     useEffect(() => {
-        axios.get("https://fortniteapi.io/v2/items/list?lang=en", {
-            headers: {
-                Authorization: "0c13c2aa-0a2cec03-b5455c56-766ae857"
-            }
-        })
-            .then(res => {
-                setData(res.data.items)
+        axios
+            .get("https://fortniteapi.io/v2/items/list?lang=en", {
+                headers: {
+                    Authorization: "0c13c2aa-0a2cec03-b5455c56-766ae857",
+                },
             })
-            .catch(err => console.log(err))
-
+            .then((res) => {
+                setData(res.data.items);
+            })
+            .catch((err) => console.log(err));
     }, []);
 
     useEffect(() => {
-        let filterData = data.filter(item => item.name.toLowerCase().includes(inputValue.toLowerCase())).slice(0, 6)
-        setSearchData(filterData)
-    }, [inputValue, data])
+        let filterData = data
+            .filter((item) =>
+                item.name.toLowerCase().includes(inputValue.toLowerCase())
+            )
+            .slice(0, 6);
+        setSearchData(filterData);
+    }, [inputValue, data]);
+
+
 
     return (
-        <div className='navbar_wrapper'>
-            <div className='nav_logo_wrapper'>
+        <div className="navbar__wrapper flex">
+            <div className="nav__logo__wrapper flex">
                 <NavLink to="/">
-                    <div className='nav_logo'></div>
-                </NavLink >
-                <div className='logo_fortnite'></div>
+                    <img className="nav__logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Epic_Games_logo.png" alt="epic games logo" />
+                </NavLink>
+                <img src="https://i.pinimg.com/originals/67/33/73/673373d908da756f3565012ee9fa2a69.png" alt="" className="logo__fortnite" />
             </div>
-            
-            <div className='nav_items'>
-                <ul className='nav_lists' style={search ? { display: "none" } : { display: "flex" }}>
-                    <li className='nav_list_text1'>MODES
-                        <div className='down_list'>
-                            <ul className='down_list_items'>
+
+            <div className="nav__items">
+                <ul
+                    className="nav__lists flex"
+                    style={search ? { display: "none" } : { display: "flex" }}
+                >
+                    <li className="nav__list__text1 overlay">
+                        MODES
+                        <div className="down__list">
+                            <ul className="down__list__items">
                                 <li>BATTLE ROYALE</li>
                                 <li>ZERO BUILD</li>
                                 <li>CREATIVE</li>
@@ -51,58 +61,87 @@ const Navbar = () => {
                             </ul>
                         </div>
                     </li>
-                    <li className='nav_list_text'>
-                        <NavLink activeClassName="active_link" to="/battle-pass">BATTLE PASS</NavLink >
+                    <li className="nav__list__text">
+                        <NavLink className="active__link" to="/battle-pass">
+                            BATTLE PASS
+                        </NavLink>
                     </li>
-                    <li className='nav_list_text'>
-                        <NavLink activeClassName="active_link" to="/product">CREW</NavLink >
+                    <li className="nav__list__text">
+                        <NavLink className="active__link" to="/product">
+                            CREW
+                        </NavLink>
                     </li>
-                    <li className='nav_list_text'>
-                        <NavLink activeClassName="active_link" to="/vbucks">V-BUCKS</NavLink >
+                    <li className="nav__list__text">
+                        <NavLink className="active__link" to="/vbucks">
+                            V-BUCKS
+                        </NavLink>
                     </li>
-                    <li className='nav_list_text'>COMPETITIVE</li>
-                    <li className='nav_list_text'><NavLink activeClassName="active_link" to="/news">NEWS</NavLink ></li>
-                    <li className='nav_list_text'>MERCH</li>
-                    <li className='nav_list_text'><NavLink activeClassName="active_link" to="/cosplay">MOBILE</NavLink ></li>
-                    <li className='nav_list_text'><NavLink activeClassName="active_link" to="/help">HELP</NavLink ></li>
+                    <li className="nav__list__text">COMPETITIVE</li>
+                    <li className="nav__list__text">
+                        <NavLink className="active__link" to="/news">
+                            NEWS
+                        </NavLink>
+                    </li>
+                    <li className="nav__list__text">MERCH</li>
+                    <li className="nav__list__text">
+                        <NavLink className="active__link" to="/cosplay">
+                            MOBILE
+                        </NavLink>
+                    </li>
+                    <li className="nav__list__text">
+                        <NavLink className="active__link" to="/help">
+                            HELP
+                        </NavLink>
+                    </li>
                 </ul>
             </div>
-            <div className={search ? "search_icon showSearch" : "search_icon"} >
-                <input type="text" placeholder='Search...'
-                    onChange={e => setInputValue(e.target.value)}
-                    value={inputValue} />
-                <div className="search_result" style={{ display: inputValue.trim() ? "block" : "none" }}>
-                    {
-                        searchData.length ? searchData?.map((item, index) =>
+            <div className={search ? " showSearch flex" : "search__icon flex"}>
+                <input
+                    className="search__input"
+                    type="text"
+                    placeholder="Search..."
+                    onChange={(e) => setInputValue(e.target.value)}
+                    value={inputValue}
+                />
+                <div
+                    className="search__result"
+                    style={{ display: inputValue.trim() ? "block" : "none" }}
+                >
+                    {searchData.length ? (
+                        searchData?.map((item, index) => (
                             <Link
                                 key={index}
                                 to={`/product/${item.id}`}
-                                className="search_link "
+                                className="search__link flex "
                                 onClick={() => {
-                                    setInputValue("")
-                                    setSearch(false)
-                                }}>
-                                <img width="50" src={item.images.background} alt="" />
-                                <span> {item.name} </span>
-                            </Link >
-                        )
-                            :
-                            <p>not found</p>
-                    }
+                                    setInputValue("");
+                                    setSearch(false);
+                                }}
+                            >
+                                <p className="flex"> <img width="50" src={item.images.background} alt="" />
+                                    <span> {item.name} </span></p>
+                            </Link>
+                        ))
+                    ) : (
+                        <p>not found</p>
+                    )}
                 </div>
-                {
-                    search ? <FiX onClick={() => {
-                        setInputValue("")
-                        setSearch(p => !p)
-                    }} />
-                        :
-                        <IoSearchOutline onClick={() => setSearch(p => !p)} />
-                }
+                {search ? (
+                    <FiX
+                        className="icon"
+                        onClick={() => {
+                            setInputValue("");
+                            setSearch((p) => !p);
+                        }}
+                    />
+                ) : (
+                    <IoSearchOutline className=" icon" onClick={() => setSearch((p) => !p)} />
+                )}
             </div>
-            <div className="icon_container">
-                <div className="world_icon">
-                    <IoGlobeOutline />
-                    {/* <ul className="language_collection">
+            <div className="icon__container flex">
+                <div className="world__icon">
+                    <IoGlobeOutline className="language--icon icon" />
+                    <ul className="language__collection">
                         <li>العربية</li>
                         <li>DEUTSCH</li>
                         <li>ESPAÑOL (SPAIN)</li>
@@ -115,15 +154,21 @@ const Navbar = () => {
                         <li>PORTUGUÊS (BRASIL)</li>
                         <li>РУССКИЙ</li>
                         <li>TÜRKÇE</li>
-                    </ul> */}
+                    </ul>
                 </div>
-                <div className='login'>
-                    <IoPersonAdd /> <p>SIGN IN</p>
-                </div>
+                <button className="login flex">
+                    <IoPersonAdd className="icon" /> SIGN IN
+                </button>
             </div>
-            <button className='download_btn'>DOWNLOAD</button>
-        </div>
-    )
-}
+            <div className="btn__container flex">
+                <button className="download__btn">download</button>
 
-export default Navbar
+                {
+                    isSidebarOpen ? <FiX className="sidebar__close" onClick={toggleSidebar} /> : <HiMenu className="bars--icon " onClick={toggleSidebar} />
+                }
+            </div>
+        </div>
+    );
+};
+
+export default Navbar;

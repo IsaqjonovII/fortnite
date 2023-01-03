@@ -6,31 +6,26 @@
   background-color: #fff;
 }
 
-.img_container {
+.banner__img {
   width: 100%;
   height: 700px;
-  display: flex;
-  align-items: flex-start;
-  overflow: hidden;
-  scroll-behavior: smooth;
-  margin: auto;
-}
-
-.img_container img {
-  width: 100%;
-  object-fit: cover;
-}
-
-.dots_container {
-  width: 50vw;
-  height: 35px;
-  display: flex;
-  align-items: center;
+  background-image: url("https://cdn2.unrealengine.com/fortnite-home-page-zero-build-promo-slide-desktop-1920x1080-b5271796c9a6.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
-  bottom: 80px;
-  left: 50%;
-  transform: translateX(-50%);
+top: 5vh;
 }
+
+
+.banner__img img {
+  width: 633px;
+  object-fit: cover;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
 
 .btn {
   width: 200px;

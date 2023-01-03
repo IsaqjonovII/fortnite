@@ -30,9 +30,6 @@ const BattlePass = () => {
   }, [])
 
 
-  // console.log(data);
-
-
   useEffect(() => {
     if (imageAnimation) {
       setIMageAnimation(false)

@@ -1,0 +1,102 @@
+.sidebar {
+    width: 90%;
+    height: 100vh;
+    background-color: #212121;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    z-index: 999;
+    transform: scaleX(0);
+    opacity: 0;
+    transform-origin: right;
+    transition: 250ms all;
+}
+
+.sidebar--opened {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar__links {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+}
+
+.sidebar__link {
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    padding: 0 30px;
+    box-shadow: 1px 1px 0px #303030;
+    color: #ccc;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.sidebar__bottom {
+    width: 100%;
+    height: 33%;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 -5px 15px;
+}
+
+
+.search__container {
+    width: 100%;
+    height: 50px;
+    margin: 30px auto;
+    background-color: #303030;
+    border-radius: 4px;
+    padding: 0 10px;
+}
+.search--icon {
+    font-size: 23px;
+    color: #ccc;
+}
+
+.search__input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #ccc;
+    font-size: 18px;
+    text-indent: 19px;
+}
+
+.search__input::placeholder {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.signin__container {
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+}
+
+.signin__container button {
+    flex: 1;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    border: 1px solid #303030;
+    color: #ccc;
+    font-size: 18px;
+}
+
+.globe--icon {
+    color: #ccc;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #303030;
+    font-size: 24px;
+}

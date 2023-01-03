@@ -3,48 +3,12 @@ import c from "./Banner.module.css";
 import fortnite from "../../assets/fortnite.svg"
 
 const Banner = () => {
-  const [imageNumber, setImageNumber] = useState(0);
-  const imageContainer = useRef();
-  const data = [
-    "https://www.digitaltrends.com/wp-content/uploads/2022/06/fortnite-vibin.jpg?p=1",
-    "https://cdn2.unrealengine.com/fortnite-home-page-battle-pass-promo-slide-desktop-1920x1080-6657f41ee1bd.jpg",
-    "https://fotografias-neox.atresmedia.com/clipping/cmsimages01/2022/04/01/10A7E5D8-02CB-457D-9078-7EA567B0E623/fortnite-cero-construccion_98.jpg?crop=1257,707,x0,y0&width=1900&height=1069&optimize=high&format=webply",
-  ];
-  useEffect(() => {
-    imageContainer.current.scrollLeft =
-      imageNumber * imageContainer.current.offsetWidth;
-  }, [imageNumber]);
-  useEffect(() => {
-    setTimeout(() => {
-      if (imageNumber < data.length) {
-        setImageNumber((imageNumber) => imageNumber + 1);
-      } else {
-        setImageNumber(0);
-      }
-    }, 4000);
-  }, [imageNumber, data.length]);
+  
 
   return (
     <div className={c.banner}>
-      <div ref={imageContainer} className={c.img_container}>
-        {data.map((imgURL, inx) => (
-          <img className={c.carousel_img} src={imgURL} key={inx} alt="" />
-        ))}
-      </div>
-
-      <div className={c.dots_container}>
-        {data.map((btn, index) => (
-          <button
-            className={c.btn}
-            onClick={() => setImageNumber(index)}
-            key={index}
-            style={
-              index === imageNumber
-                ? { backgroundColor: "rgba(30, 143, 255, 0.326)" }
-                : null
-            }
-          ></button>
-        ))}
+      <div className={c.banner__img}>
+        <img src="https://cdn2.unrealengine.com/zero-build-battle-royale-logo-blue-en-2739x1246-955d0fb099dc.png" alt="" />
       </div>
 
       <div className={c.center_container}>
