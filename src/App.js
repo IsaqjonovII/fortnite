@@ -24,6 +24,7 @@ function App() {
   } else {
     document.body.style = "overflow: auto";
   }
+
   return (
     <div className="app">
       <Navbar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
