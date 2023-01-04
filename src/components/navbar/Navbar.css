@@ -224,6 +224,12 @@
 }
 
 
+@media screen and (max-width: 1500px) {
+  .nav__list__text {
+    font-size: 13px;
+    margin: 0 8px;
+  }
+}
 @media screen and (max-width: 1450px) {
   .nav__list__text {
     font-size: 9px;
@@ -231,7 +237,7 @@
   }
 }
 
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 1260px) {
 
   .navbar__wrapper {
     justify-content: space-between;
@@ -241,7 +247,7 @@
   .icon__container,
   .icon,
   .search__icon {
-    display: none;
+    display: none !important;
   }
 
   .bars--icon,
@@ -256,11 +262,12 @@
 
 }
 
-@media screen and (max-width: 1024px) {}
-
-@media screen and (max-width: 976px) {}
-
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 670px) {
+  .download__btn {
+    max-width: 100px;
+    font-size: 10px;
+  }
+}
 
 @media screen and (max-width: 501px) {}
 
